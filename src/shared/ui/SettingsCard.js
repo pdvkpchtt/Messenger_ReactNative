@@ -17,18 +17,21 @@ const SettingsCard = ({
   return (
     <Pressable
       onPress={pressable ? () => onPress() : null}
-      style={{
-        backgroundColor: theme.card,
-        width: "100%",
-        padding: 12,
-        borderRadius: 12,
-        borderWidth: 1.5,
-        borderColor: theme.primary,
-        marginBottom: mb,
-        marginTop: mt,
-        marginLeftL: ml,
-        marginRightL: mr,
-      }}
+      style={({ pressed }) => [
+        {
+          backgroundColor: theme.card,
+          width: "100%",
+          padding: 12,
+          borderRadius: 12,
+          borderWidth: 1.5,
+          borderColor: theme.primary,
+          marginBottom: mb,
+          marginTop: mt,
+          marginLeftL: ml,
+          marginRightL: mr,
+        },
+        pressed && pressable && { opacity: 0.5 },
+      ]}
     >
       {children}
     </Pressable>

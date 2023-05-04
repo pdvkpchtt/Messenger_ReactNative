@@ -4,7 +4,7 @@ import { Ionicons } from "@expo/vector-icons";
 import { useContext } from "react";
 
 import themeContext from "../config/themeContext";
-import MapPage from "../pages/MapPage";
+import ChatPage from "../pages/ChatPage";
 import ProfilePage from "../pages/ProfilePage";
 import SettingsPage from "../pages/SettingsPage";
 
@@ -26,23 +26,23 @@ const Navigation = () => {
     >
       <Tab.Navigator
         useLegacyImplementation={true} // помогает не крашиться react reanimated
-        initialRouteName={"Map"}
+        initialRouteName={"Chat"}
         screenOptions={{
           tabBarShowLabel: false,
           headerShown: false,
           tabBarStyle: {
-            height: 50,
+            height: 45,
           },
         }}
       >
         <Tab.Screen
-          name="Map"
-          component={MapPage}
+          name="Chat"
+          component={ChatPage}
           options={{
             tabBarIcon: ({ focused }) => (
               <Ionicons
-                name="baseball-sharp"
-                size={30}
+                name="chatbubbles-outline"
+                size={27}
                 color={focused ? theme.primary : theme.subcolor}
               />
             ),
@@ -54,8 +54,8 @@ const Navigation = () => {
           options={{
             tabBarIcon: ({ focused }) => (
               <Ionicons
-                name="baseball-sharp"
-                size={30}
+                name="code-working"
+                size={27}
                 color={focused ? theme.primary : theme.subcolor}
               />
             ),
@@ -68,7 +68,7 @@ const Navigation = () => {
             tabBarIcon: ({ focused }) => (
               <Ionicons
                 name="settings-outline"
-                size={30}
+                size={27}
                 color={focused ? theme.primary : theme.subcolor}
               />
             ),

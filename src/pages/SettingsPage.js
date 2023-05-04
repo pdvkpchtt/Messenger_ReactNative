@@ -40,7 +40,7 @@ const SettingsPage = () => {
       </SettingsCard>
 
       {/* privacy */}
-      <SettingsCard pressable onPress={() => setModal(true)} mt={12}>
+      <SettingsCard pressable onPress={() => console.log("a")} mt={12}>
         <View
           style={{
             display: "flex",
@@ -71,7 +71,6 @@ const SettingsPage = () => {
         animationOut="slideOutDown"
         // onBackdropPress={() => setModal(false)}
         // onBackButtonPress={() => setModal(false)}
-
         onSwipeComplete={() => setModal(false)}
         swipeDirection={["down"]}
       >

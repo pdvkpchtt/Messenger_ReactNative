@@ -42,7 +42,7 @@ export default function App() {
         <Navigation />
       </themeContext.Provider>
 
-      <StatusBar style={mode === true ? "light" : "dark"} />
+      <StatusBar style={mode.theme === "dark" ? "light" : "dark"} />
     </View>
   );
 }

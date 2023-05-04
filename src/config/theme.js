@@ -20,10 +20,19 @@ const theme = {
   green: {
     theme: "green",
     color: "#2c2c2c",
-    subcolor: "#128c7e",
-    primary: "#075e54",
-    background: "#ece5dd",
-    card: "#dcf8c6",
+    subcolor: "#bfbfbf",
+    primary: "green",
+    background: "#f6f6f8",
+    card: "#fff",
+    statusbar: "dark",
+  },
+  red: {
+    theme: "red",
+    color: "#2c2c2c",
+    subcolor: "#bfbfbf",
+    primary: "red",
+    background: "#f6f6f8",
+    card: "#fff",
     statusbar: "dark",
   },
 };

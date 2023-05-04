@@ -15,6 +15,7 @@ const ThemeSwitcher = () => {
     { id: 0, name: "light", state: theme.theme === "light" ? true : false },
     { id: 1, name: "dark", state: theme.theme === "dark" ? true : false },
     { id: 2, name: "green", state: theme.theme === "green" ? true : false },
+    { id: 3, name: "red", state: theme.theme === "red" ? true : false },
   ]);
 
   const themes = [
@@ -29,6 +30,10 @@ const ThemeSwitcher = () => {
     {
       text: "Green",
       icon: "leaf",
+    },
+    {
+      text: "Red",
+      icon: "warning",
     },
   ];
 
