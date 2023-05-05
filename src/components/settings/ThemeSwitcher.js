@@ -5,7 +5,6 @@ import { Ionicons } from "@expo/vector-icons";
 import { useContext } from "react";
 
 import themeContext from "../../config/themeContext";
-import SettingsCard from "../../shared/ui/SettingsCard";
 import TextMain from "../../shared/ui/TextMain";
 
 const ThemeSwitcher = () => {
@@ -14,8 +13,7 @@ const ThemeSwitcher = () => {
   const [modeState, setModeState] = useState([
     { id: 0, name: "light", state: theme.theme === "light" ? true : false },
     { id: 1, name: "dark", state: theme.theme === "dark" ? true : false },
-    { id: 2, name: "green", state: theme.theme === "green" ? true : false },
-    { id: 3, name: "red", state: theme.theme === "red" ? true : false },
+    { id: 2, name: "fog", state: theme.theme === "fog" ? true : false },
   ]);
 
   const themes = [
@@ -28,17 +26,22 @@ const ThemeSwitcher = () => {
       icon: "moon",
     },
     {
-      text: "Green",
-      icon: "leaf",
-    },
-    {
-      text: "Red",
-      icon: "warning",
+      text: "Fog",
+      icon: "cloud",
     },
   ];
 
   return (
-    <SettingsCard>
+    <View
+      style={{
+        padding: 12,
+        borderTopRightRadius: 12,
+        borderTopLeftRadius: 12,
+        borderWidth: 1.5,
+        borderColor: theme.primary,
+        backgroundColor: theme.card,
+      }}
+    >
       {themes.map((item, key) => (
         <View
           key={key}
@@ -75,7 +78,7 @@ const ThemeSwitcher = () => {
           />
         </View>
       ))}
-    </SettingsCard>
+    </View>
   );
 };
 

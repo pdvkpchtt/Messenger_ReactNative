@@ -5,8 +5,8 @@ import { useContext } from "react";
 
 import themeContext from "../config/themeContext";
 import ChatPage from "../pages/ChatPage";
-import ProfilePage from "../pages/ProfilePage";
 import SettingsPage from "../pages/SettingsPage";
+import Chat from "../pages/Chat";
 
 const Tab = createBottomTabNavigator();
 
@@ -50,7 +50,7 @@ const Navigation = () => {
         />
         <Tab.Screen
           name="Profile"
-          component={ProfilePage}
+          component={Chat}
           options={{
             tabBarIcon: ({ focused }) => (
               <Ionicons

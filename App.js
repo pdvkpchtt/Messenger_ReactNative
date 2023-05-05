@@ -23,6 +23,9 @@ export default function App() {
     golosMed: require("./assets/fonts/GolosText-Medium.ttf"),
     golosReg: require("./assets/fonts/GolosText-Regular.ttf"),
   });
+  if (!loaded) {
+    return null;
+  }
 
   useEffect(() => {
     let eventListener = EventRegister.addEventListener(
@@ -42,7 +45,7 @@ export default function App() {
         <Navigation />
       </themeContext.Provider>
 
-      <StatusBar style={mode.theme === "dark" ? "light" : "dark"} />
+      <StatusBar style={mode.statusbar === "dark" ? "dark" : "light"} />
     </View>
   );
 }

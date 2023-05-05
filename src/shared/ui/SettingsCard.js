@@ -19,8 +19,8 @@ const SettingsCard = ({
       onPress={pressable ? () => onPress() : null}
       style={({ pressed }) => [
         {
-          backgroundColor: theme.card,
           width: "100%",
+          backgroundColor: theme.card,
           padding: 12,
           borderRadius: 12,
           borderWidth: 1.5,
@@ -30,7 +30,7 @@ const SettingsCard = ({
           marginLeftL: ml,
           marginRightL: mr,
         },
-        pressed && pressable && { opacity: 0.5 },
+        pressed && pressable && { transform: [{ scale: 1.02 }] },
       ]}
     >
       {children}

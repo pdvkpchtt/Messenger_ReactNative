@@ -65,7 +65,11 @@ const SettingsPage = () => {
       <Modal
         isVisible={modal}
         backdropOpacity={0.5}
-        style={{ margin: 0, padding: 20, alignItems: "center" }}
+        style={{
+          justifyContent: "flex-end",
+          marginBottom: -1.5,
+          marginHorizontal: 10,
+        }}
         backdropTransitionOutTiming={10}
         animationIn="slideInUp"
         animationOut="slideOutDown"

@@ -17,23 +17,14 @@ const theme = {
     card: "#fff",
     statusbar: "dark",
   },
-  green: {
-    theme: "green",
-    color: "#2c2c2c",
+  fog: {
+    theme: "fog",
+    color: "#fff",
     subcolor: "#bfbfbf",
-    primary: "green",
-    background: "#f6f6f8",
-    card: "#fff",
-    statusbar: "dark",
-  },
-  red: {
-    theme: "red",
-    color: "#2c2c2c",
-    subcolor: "#bfbfbf",
-    primary: "red",
-    background: "#f6f6f8",
-    card: "#fff",
-    statusbar: "dark",
+    primary: "#006663",
+    background: "#252526",
+    card: "#0D0D0D",
+    statusbar: "light",
   },
 };
 

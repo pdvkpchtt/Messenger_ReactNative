@@ -1,15 +1,17 @@
-import styled from "styled-components";
+import { View } from "react-native";
 import { StatusBar } from "react-native";
 
-const View_Layout = styled.View`
-  padding: 8px;
-`;
-
-const Layout = ({ children, statusBar = false }) => {
+const Layout = ({ children, statusBar = false, noPadding = false }) => {
   return (
-    <View_Layout style={{ marginTop: statusBar ? StatusBar.currentHeight : 0 }}>
+    <View
+      style={{
+        marginTop: statusBar ? StatusBar.currentHeight : 0,
+        padding: noPadding ? 0 : 8,
+        // borderWidth: 1,
+      }}
+    >
       {children}
-    </View_Layout>
+    </View>
   );
 };
 
